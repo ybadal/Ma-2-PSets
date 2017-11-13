@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble
+\documentclass[11pt]{article}
+\setlength{\parskip}{\baselineskip}%
+\setlength{\parindent}{0pt}%
+\usepackage{amsmath,amssymb,amsthm,physics,graphicx,titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{remark}{Remark}
+\newcommand{\boxthis}[1]{\noindent\fbox{%
+    \parbox{\textwidth}{%
+        #1
+    }%
+}
+}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Heading
+	\title{Ma 2 - Problem Set 1}
+	\author{Yovan Badal}
+	\date{09/27/2017}
+	\maketitle
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Body
+\section{Continuous fixed thirty-year mortgage}
+\boxthis{A mortgage is a loan, usually for buying
+a house, in which a borrower makes a fixed payment over the lifetime of the loan, until
+the balance of the loan is reduced to zero. Usually in a real mortgage, the payment is
+made monthly and the interest is compounded monthly. In this problem, we consider a
+mortgage in which the payment is made as a continuous stream and so that the interest
+compounds continuously. We will denote the balance of the loan at time t (in years) as
+y(t). Then y(t) will be the solution given in lecture 1 to the differential equation
+\[
+\dv{y}{t} = ry - p,
+\]
+where r is a constant representing the annual rate of interest, and p is a constant representing the rate of payment per year, satisfying the initial condition
+\[
+y(0) = M,
+\]
+where M is the (nonzero) initial amount of the loan. Find a formula for p in terms of r and
+M so that the balance will also satisfy y(30) = 0. At any time, the rate at which interest is
+being paid on the loan is ry(t). Thus the amount of the payment being applied to principal
+is $q(t) = p - ry(t)$. Without using the solution you obtained, find a differential equation
+(hopefully as simple as possible) satisfied by the quantity q(t). Plugging in your solution
+for y(t), determine the initial condition q(0) and verify that q(0) satisfies the differential
+equation that you found.}
+
+\end{document}
