@@ -83,7 +83,7 @@ def runge_kutta(func, x0, y0, N, x):
         return xy_arr
 
 
-print(euler(func, 0, 1, 200, 10)[200])
-print(euler_trap(func, 0, 1, 200, 10)[200])
-print(runge_kutta(func, 0, 1, 200, 10)[200])
+# print(euler(func, 0, 1, 200, 10))
+# print(euler_trap(func, 0, 1, 200, 10))
+# print(runge_kutta(func, 0, 1, 200, 10))
 
