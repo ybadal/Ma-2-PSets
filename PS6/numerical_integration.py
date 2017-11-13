@@ -1,5 +1,5 @@
 import numpy as np
-
+from tabulate import tabulate
 
 def func(y):
 	"""Defining the function F for our differential equation"""
@@ -83,7 +83,16 @@ def runge_kutta(func, x0, y0, N, x):
         return xy_arr
 
 
-# print(euler(func, 0, 1, 200, 10))
-# print(euler_trap(func, 0, 1, 200, 10))
-# print(runge_kutta(func, 0, 1, 200, 10))
+xval = euler(func, 0, 1, 200, 10)[:,0]
+yval = euler(func, 0, 1, 200, 10)[:,2]
+euler_val = euler(func, 0, 1, 200, 10)[:,1]
+euler_err = euler(func, 0, 1, 200, 10)[:,3]
+trap_val = euler_trap(func, 0, 1, 200, 10)[:,1]
+trap_err = euler_trap(func, 0, 1, 200, 10)[:,3]
+runge_val = runge_kutta(func, 0, 1, 200, 10)[:,1]
+runge_err = runge_kutta(func, 0, 1, 200, 10)[:,3]
+
+comparison = np.c_[ xval, yval, euler_val, euler_err, trap_val, trap_err, runge_val, runge_err ]
+
+print(tabulate(comparison, floatfmt='.6e'))
 
